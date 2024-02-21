@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Assignment for CSCE:606 Texas A&M University
 
-Things you may want to cover:
+Steps to run locally:
 
-* Ruby version
+clone the repo
 
-* System dependencies
+bundle install
 
-* Configuration
+rails server
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Deployed Website: https://fast-beach-15258-cac35fdb2082.herokuapp.com/
