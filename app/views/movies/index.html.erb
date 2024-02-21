@@ -2,6 +2,34 @@
 
 <h1>Movies</h1>
 <%= link_to "Add New movie", new_movie_path %>
+
+<div id="sorting_links">
+  <p>
+    <% if params[:sort_by] == 'release_date_asc' %>
+      <%= link_to 'Release Date ↑', movies_path(sort_by: 'release_date_asc'), style: 'color: green;' %>
+      <%= link_to 'Release Date ↓', movies_path(sort_by: 'release_date_desc') %>
+    <% elsif params[:sort_by] == 'release_date_desc' %>
+      <%= link_to 'Release Date ↑', movies_path(sort_by: 'release_date_asc') %>
+      <%= link_to 'Release Date ↓', movies_path(sort_by: 'release_date_desc'), style: 'color: red;' %>
+    <% else %>
+      <%= link_to 'Release Date ↑', movies_path(sort_by: 'release_date_asc') %>
+      <%= link_to 'Release Date ↓', movies_path(sort_by: 'release_date_desc') %>
+    <% end %>
+  </p>
+  <p>
+    <% if params[:sort_by] == 'rating_asc' %>
+      <%= link_to 'Rating ↓', movies_path(sort_by: 'rating_asc'), style: 'color: red;' %>
+      <%= link_to 'Rating ↑', movies_path(sort_by: 'rating_desc') %>
+    <% elsif params[:sort_by] == 'rating_desc' %>
+      <%= link_to 'Rating ↓', movies_path(sort_by: 'rating_asc') %>
+      <%= link_to 'Rating ↑', movies_path(sort_by: 'rating_desc'), style: 'color: green;' %>
+    <% else %>
+      <%= link_to 'Rating ↑', movies_path(sort_by: 'rating_asc') %>
+      <%= link_to 'Rating ↓', movies_path(sort_by: 'rating_desc') %>
+    <% end %>
+  </p>
+</div>
+
 <div id="movies">
   <% @movies.each do |movie| %>
     <%= render movie %>
@@ -10,5 +38,3 @@
     </p>
   <% end %>
 </div>
-
-
