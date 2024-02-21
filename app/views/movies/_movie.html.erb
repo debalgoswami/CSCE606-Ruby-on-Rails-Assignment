@@ -1,0 +1,36 @@
+<style>
+  #<%= dom_id movie %> {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  #<%= dom_id movie %> p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  #<%= dom_id movie %> strong {
+    font-weight: bold;
+  }
+</style>
+
+<div id="<%= dom_id movie %>">
+  <p>
+    <strong>Title:</strong>
+    <%= movie.title %>
+  </p>
+
+  <p>
+    <strong>Rating:</strong>
+    <%= movie.rating %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= movie.description %>
+  </p>
+
+  <p>
+    <strong>Release date:</strong>
+    <%= movie.release_date %>
+  </p>
+</div>
